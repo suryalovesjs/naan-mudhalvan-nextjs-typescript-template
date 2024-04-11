@@ -33,4 +33,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Workshop Feedback
+We would love to hear your feedback about the workshop. Please take a moment to fill out the [feedback form](https://forms.gle/PyezsKYbnT55UZtV6). Your input is valuable to us and will help us improve future workshops.
 
+For any questions, reach out to iamssurya@gmail.com.
