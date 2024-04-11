@@ -1,10 +1,9 @@
 import fetch from "node-fetch";
-import { NextApiRequest } from "next";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const searchQuery = searchParams.get("query");
-  const url = `https://openlibrary.org/search.json?q=${searchQuery}&limit=10`;
+  const url = `https://openlibrary.org/search.json?title=${searchQuery}&limit=10`;
 
   try {
     const response = await fetch(url);
@@ -16,7 +15,7 @@ export async function GET(req: Request) {
         description: '',
         image:
           doc.isbn && doc.isbn.length > 0
-            ? `https://covers.openlibrary.org/b/isbn/${doc.isbn[0]}-M.jpg`
+            ? `https://covers.openlibrary.org/b/isbn/${doc.isbn[0]}-L.jpg`
             : "https://www.shutterstock.com/image-vector/blank-vertical-book-cover-template-600nw-172777709.jpg",
         other_data: { ...doc },
       };
