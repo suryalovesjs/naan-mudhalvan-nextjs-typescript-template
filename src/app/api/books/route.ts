@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const searchQuery = searchParams.get("query");
-  const url = `https://openlibrary.org/search.json?title=${searchQuery}&limit=10`;
+  const url = `https://openlibrary.org/search.json?q=${searchQuery}&limit=10`;
 
   try {
     const response = await fetch(url);
